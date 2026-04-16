@@ -1,100 +1,91 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ====== Your Existing Global Styles (Next.js defaults) ====== */
 
-html, body {
-  min-height: 100%;
-  background: #0d0d0d;
-  color: white;
-  font-family: system-ui, sans-serif;
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 body {
-  display: block;
-  overflow-y: auto;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-  display: flex;
-  gap: 4rem;
-  max-width: 900px;
-  width: 100%;
-  padding: 4rem 2rem;
-  margin: 0 auto;
-}
-
-.left, .right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Fade-in for whole page */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.2s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Fourmiles-style intro animation */
-.intro-animate {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: introUp 0.9s ease forwards;
-}
-
-@keyframes introUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* ====== Banner Styling ====== */
 
 .banner {
   width: 100%;
-  margin-top: 4rem;
-  border-radius: 10px;
-}
-
-.section {
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-  text-align: left;
+  border-radius: 12px;
+  margin-bottom: 2rem;
 }
 
-.section h1 {
-  font-size: 2rem;
-  margin-top: 1.5rem;
-}
+/* ====== Layout Styling ====== */
 
-.section p {
-  margin-top: 0.5rem;
-  color: #aaa;
-  max-width: 600px;
-}
-
-.red-btn {
-  margin-top: 1.5rem;
-  background: #b30000;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: inline-flex;
+main {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.2s;
+  padding: 2rem;
 }
 
-.red-btn:hover {
-  background: #cc0000;
+/* ====== Discord Profile Card ====== */
+
+.discord-card {
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid #222;
+  margin-top: 2rem;
+}
+
+.discord-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.discord-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.discord-status {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.discord-custom {
+  color: #ccc;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+
+/* ====== Activity Section ====== */
+
+.discord-activity {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.activity-box {
+  background: #181818;
+  padding: 0.7rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
 }
