@@ -1,4 +1,4 @@
-/* ====== Your Existing Global Styles (Next.js defaults) ====== */
+/* ====== Global Defaults ====== */
 
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -19,7 +19,29 @@ body {
   padding: 0;
 }
 
-/* ====== Banner Styling ====== */
+/* ====== Layout ====== */
+
+.container {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+/* LEFT COLUMN — Discord card aligned left */
+.left {
+  width: 300px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* RIGHT COLUMN */
+.right {
+  max-width: 500px;
+}
+
+/* ====== Banner ====== */
 
 .banner {
   width: 100%;
@@ -28,13 +50,14 @@ body {
   margin-bottom: 2rem;
 }
 
-/* ====== Layout Styling ====== */
+/* ====== Greenville Section (centered) ====== */
 
-main {
+.section {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  margin-top: 3rem;
 }
 
 /* ====== Discord Profile Card ====== */
@@ -49,7 +72,6 @@ main {
   align-items: center;
   gap: 0.6rem;
   border: 1px solid #222;
-  margin-top: 2rem;
 }
 
 .discord-avatar {
