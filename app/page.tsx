@@ -122,7 +122,7 @@ export default function Home() {
         </div>
       </main>
 
-      {/* BANNER SECTION */}
+      {/* BANNER SECTION — CENTERED */}
       <section className="section">
         <img
           src="/banner.png"
