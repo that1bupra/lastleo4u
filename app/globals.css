@@ -6,9 +6,10 @@
 
 html, body {
   height: 100%;
-  background: #0d0d0d;
+  background: #000;
   color: white;
   font-family: system-ui, sans-serif;
+  overflow: hidden;
 }
 
 body {
@@ -23,6 +24,8 @@ body {
   max-width: 900px;
   width: 100%;
   padding: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .left, .right {
@@ -43,7 +46,7 @@ body {
   }
 }
 
-/* lastleo4u-style intro animation */
+/* Fourmiles-style intro animation */
 .intro-animate {
   opacity: 0;
   transform: translateY(20px);
@@ -55,6 +58,43 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Rain background */
+.rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url('/rain.png');
+  animation: rainFall 0.5s linear infinite;
+  opacity: 0.25;
+}
+
+@keyframes rainFall {
+  from { background-position: 0 0; }
+  to { background-position: 0 100%; }
+}
+
+/* Mute button */
+.mute-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #111;
+  border: 1px solid #333;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  z-index: 3;
+  transition: 0.2s;
+}
+
+.mute-btn:hover {
+  background: #222;
 }
 
 a {
