@@ -99,7 +99,7 @@ export default function Home() {
 
         {/* RIGHT SIDE — Main Content */}
         <div className="right">
-          <h1 className="intro-animate" style={{ fontSize: "3rem", fontWeight: "700" }}>
+          <h1 className="intro-animate" id="intro-text">
             Hey, I'm Leo
           </h1>
 
@@ -113,10 +113,10 @@ export default function Home() {
 
           <div style={{ marginTop: "2rem" }}>
             <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>Links</h2>
-            <div style={{ display: "flex", gap: "1.5rem" }}>
-              <a href="https://github.com/yourname" target="_blank">GitHub</a>
-              <a href="https://discord.com/users/1345807471528247489" target="_blank">Discord</a>
-              <a href="https://guns.lol/lastleo4u" target="_blank">guns.lol</a>
+            <div className="link-buttons">
+              <a className="btn" href="https://github.com/yourname" target="_blank">GitHub</a>
+              <a className="btn" href="https://discord.com/users/1345807471528247489" target="_blank">Discord</a>
+              <a className="btn" href="https://guns.lol/lastleo4u" target="_blank">guns.lol</a>
             </div>
           </div>
         </div>
@@ -124,10 +124,7 @@ export default function Home() {
 
       {/* BANNER SECTION — CENTERED */}
       <section className="section">
-        <img
-          src="/banner.png"
-          className="banner"
-        />
+        <img src="/banner.png" className="banner" />
 
         <h1>Greenville Roleplay Community</h1>
 
@@ -136,11 +133,7 @@ export default function Home() {
           making the community a better place.
         </p>
 
-        <a
-          className="red-btn"
-          href="https://discord.gg/ZaPzyKvuzX"
-          target="_blank"
-        >
+        <a className="red-btn" href="https://discord.gg/ZaPzyKvuzX" target="_blank">
           <span>🔗</span> Join Server
         </a>
       </section>
