@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      {/* TOP SECTION (same as before) */}
+      {/* TOP SECTION */}
       <main className="fade-in container">
         {/* LEFT SIDE — Discord Presence */}
         <div className="left">
@@ -56,10 +56,10 @@ export default function Home() {
         </div>
       </main>
 
-      {/* NEW SECTION — Banner + GRC Info */}
+      {/* BANNER SECTION */}
       <section className="section">
         <img
-          src="https://cdn.discordapp.com/attachments/1491451854763196557/1494424630797140210/Screenshot_2026-04-01_230539.png?ex=69e28ee5&is=69e13d65&hm=cf6746019146fd158f91ce82b672da7aa290f7bc1bfe8f833c984851650e24dd"
+          src="/banner.png"
           className="banner"
         />
 
