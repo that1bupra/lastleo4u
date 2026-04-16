@@ -2,8 +2,20 @@
 
 import { useEffect, useState } from "react";
 
+/* ---------- Lanyard Type Definition ---------- */
+type LanyardData = {
+  discord_user: {
+    id: string;
+    avatar: string;
+    global_name: string;
+  };
+  discord_status: string;
+  activities: any[];
+};
+
+/* ---------- Page Component ---------- */
 export default function Home() {
-  const [discord, setDiscord] = useState(null);
+  const [discord, setDiscord] = useState<LanyardData | null>(null);
 
   useEffect(() => {
     fetch("https://api.lanyard.rest/v1/users/1345807471528247489")
@@ -50,7 +62,7 @@ export default function Home() {
             {/* Custom Status */}
             {discord.activities?.find((a) => a.type === 4) && (
               <p className="discord-custom">
-                {discord.activities.find((a) => a.type === 4).state}
+                {discord.activities.find((a) => a.type === 4)?.state}
               </p>
             )}
 
