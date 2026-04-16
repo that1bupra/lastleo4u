@@ -31,7 +31,9 @@ export default async function Home() {
 
       {/* RIGHT SIDE — Main Content */}
       <div className="right">
-        <h1 style={{ fontSize: "3rem", fontWeight: "700" }}>Hey, I'm Leo</h1>
+        <h1 className="intro-animate" style={{ fontSize: "3rem", fontWeight: "700" }}>
+          Hey, I'm Leo
+        </h1>
 
         <div style={{ marginTop: "2rem" }}>
           <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>About</h2>
@@ -46,7 +48,7 @@ export default async function Home() {
           <div style={{ display: "flex", gap: "1.5rem" }}>
             <a href="https://github.com/yourname" target="_blank">GitHub</a>
             <a href="https://discord.com/users/1345807471528247489" target="_blank">Discord</a>
-            <a href="https://guns.lol/leo" target="_blank">guns.lol</a>
+            <a href="https://guns.lol/lastleo4u" target="_blank">guns.lol</a>
           </div>
         </div>
       </div>
