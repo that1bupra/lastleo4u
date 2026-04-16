@@ -31,6 +31,7 @@ body {
   justify-content: center;
 }
 
+/* Fade-in for whole page */
 .fade-in {
   opacity: 0;
   animation: fadeIn 1.2s ease forwards;
@@ -39,6 +40,20 @@ body {
 @keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+
+/* lastleo4u-style intro animation */
+.intro-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: introUp 0.9s ease forwards;
+}
+
+@keyframes introUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
