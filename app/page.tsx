@@ -133,7 +133,7 @@ export default function Home() {
           making the community a better place.
         </p>
 
-        <a className="red-btn" href="https://discord.gg/ZaPzyKvuzX" target="_blank">
+        <a className="btn join-btn" href="https://discord.gg/ZaPzyKvuzX" target="_blank">
           <span>🔗</span> Join Server
         </a>
       </section>
