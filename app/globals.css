@@ -111,3 +111,44 @@ body {
   border-radius: 8px;
   margin-bottom: 0.5rem;
 }
+
+/* ====== Link Buttons ====== */
+
+.link-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  background: #222;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+  border: 1px solid #333;
+}
+
+.btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* ====== Intro Animation ====== */
+
+#intro-text {
+  opacity: 0;
+  animation: fadeSlide 1.2s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
