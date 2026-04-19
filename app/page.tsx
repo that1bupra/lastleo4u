@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-/* ---------- Lanyard Type Definition ---------- */
+type Activity = {
+  type: number;
+  name: string;
+  state?: string;
+  details?: string;
+};
+
 type LanyardData = {
   discord_user: {
     id: string;
@@ -10,7 +16,7 @@ type LanyardData = {
     global_name: string;
   };
   discord_status: string;
-  activities: any[];
+  activities: Activity[];
 };
 
 export default function Home() {
@@ -24,26 +30,21 @@ export default function Home() {
 
   return (
     <>
-      {/* TOP SECTION */}
       <main className="fade-in container">
-        
-        {/* LEFT SIDE — Discord Profile Card */}
         <div className="left">
           <div className="discord-card">
             {!discord ? (
               <p style={{ color: "#555" }}>Loading...</p>
             ) : (
               <>
-                {/* Avatar */}
                 <img
                   src={`https://cdn.discordapp.com/avatars/${discord.discord_user.id}/${discord.discord_user.avatar}.png?size=256`}
                   className="discord-avatar"
+                  alt={`${discord.discord_user.global_name}'s Discord avatar`}
                 />
 
-                {/* Name */}
                 <h2 className="discord-name">{discord.discord_user.global_name}</h2>
 
-                {/* Status */}
                 <div className="discord-status">
                   {discord.discord_status === "online" && "🟢 Online"}
                   {discord.discord_status === "idle" && "🟡 Idle"}
@@ -51,19 +52,15 @@ export default function Home() {
                   {discord.discord_status === "offline" && "⚫ Offline"}
                 </div>
 
-                {/* Custom Status */}
                 {discord.activities?.find((a) => a.type === 4) && (
                   <p className="discord-custom">
                     {discord.activities.find((a) => a.type === 4)?.state}
                   </p>
                 )}
 
-                {/* Activity */}
                 {discord.activities?.find((a) => a.type !== 4) ? (
                   <div className="discord-activity">
-                    <p style={{ fontWeight: "600", marginBottom: "0.3rem" }}>
-                      Activity
-                    </p>
+                    <p style={{ fontWeight: "600", marginBottom: "0.3rem" }}>Activity</p>
 
                     {discord.activities
                       .filter((a) => a.type !== 4)
@@ -74,9 +71,7 @@ export default function Home() {
                           </p>
 
                           {activity.state && (
-                            <p style={{ color: "#aaa", fontSize: "0.85rem" }}>
-                              {activity.state}
-                            </p>
+                            <p style={{ color: "#aaa", fontSize: "0.85rem" }}>{activity.state}</p>
                           )}
 
                           {activity.details && (
@@ -88,52 +83,64 @@ export default function Home() {
                       ))}
                   </div>
                 ) : (
-                  <p style={{ color: "#777", marginTop: "1rem" }}>
-                    No active apps
-                  </p>
+                  <p style={{ color: "#777", marginTop: "1rem" }}>No active apps</p>
                 )}
               </>
             )}
           </div>
         </div>
 
-        {/* RIGHT SIDE — Main Content */}
         <div className="right">
           <h1 className="intro-animate" id="intro-text">
-            Hey, I'm Leo
+            Hey, I&apos;m Leo
           </h1>
 
           <div style={{ marginTop: "2rem" }}>
             <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>About</h2>
             <p style={{ color: "#aaa", maxWidth: "400px" }}>
-              Hi, I'm Leo. I am a discord bot developer, with not too much experience.
-              I use TypeScript/discord.js for my bots. I also like to code websites.
+              Hi, I&apos;m Leo. I am a discord bot developer, with not too much experience. I
+              use TypeScript/discord.js for my bots. I also like to code websites.
             </p>
           </div>
 
           <div style={{ marginTop: "2rem" }}>
             <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>Links</h2>
             <div className="link-buttons">
-              <a className="btn" href="https://github.com/yourname" target="_blank">GitHub</a>
-              <a className="btn" href="https://discord.com/users/1345807471528247489" target="_blank">Discord</a>
-              <a className="btn" href="https://guns.lol/lastleo4u" target="_blank">guns.lol</a>
+              <a className="btn" href="https://github.com/that1bupra" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+              <a
+                className="btn"
+                href="https://discord.com/users/1345807471528247489"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Discord
+              </a>
+              <a className="btn" href="https://guns.lol/lastleo4u" target="_blank" rel="noreferrer">
+                guns.lol
+              </a>
             </div>
           </div>
         </div>
       </main>
 
-      {/* BANNER SECTION — CENTERED */}
       <section className="section">
-        <img src="/banner.png" className="banner" />
+        <img src="/banner.png" className="banner" alt="Greenville Roleplay Community banner" />
 
         <h1>Greenville Roleplay Community</h1>
 
         <p>
-          I own/run Greenville Roleplay Community. I'm always tweaking things,
-          making the community a better place.
+          I own/run Greenville Roleplay Community. I&apos;m always tweaking things, making the
+          community a better place.
         </p>
 
-        <a className="btn join-btn" href="https://discord.gg/ZaPzyKvuzX" target="_blank">
+        <a
+          className="btn join-btn"
+          href="https://discord.gg/ZaPzyKvuzX"
+          target="_blank"
+          rel="noreferrer"
+        >
           <span>🔗</span> Join Server
         </a>
       </section>
