@@ -106,7 +106,7 @@ export default function Home() {
           <div style={{ marginTop: "2rem" }}>
             <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>About</h2>
             <p style={{ color: "#aaa", maxWidth: "400px" }}>
-              Hi, I'm Leo. I am a discord bot developer, with not too much experience.
+              Hi, I'm Leo. I am a discord bot developer, with not too much experience, but enough experience to code things like this.
               I use TypeScript/discord.js for my bots. I also like to code websites.
             </p>
           </div>
@@ -126,14 +126,14 @@ export default function Home() {
       <section className="section">
         <img src="/banner.png" className="banner" />
 
-        <h1>Greenville Roleplay Community</h1>
+        <h1>Greenville Roleplay Sector</h1>
 
         <p>
-          I own/run Greenville Roleplay Community. I'm always tweaking things,
+          I own/run Greenville Roleplay Sector. I'm always tweaking things,
           making the community a better place.
         </p>
 
-        <a className="btn join-btn" href="https://discord.gg/ZaPzyKvuzX" target="_blank">
+        <a className="btn join-btn" href="https://discord.gg/gvrps" target="_blank">
           <span>🔗</span> Join Server
         </a>
       </section>
